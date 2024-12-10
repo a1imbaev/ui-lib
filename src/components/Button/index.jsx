@@ -1,9 +1,10 @@
 import "./index.css"
 
-export function Button(props) {
-    const { variant = "primary", children } = props;
+// size = "sm" | "md" | "lg"
 
+export function Button(props) {
+    const { size = "md", variant = "primary", children } = props
     const className = `my-button my-button--${variant}`;
 
-    return <button className="my-button">{props.children}</button>;
+    return <button className={className}>{children}</button>;
 }

@@ -1,17 +1,45 @@
 .my-button {
-    min-width: 120px;
-    border: none;
     border-radius: 8px;
     cursor: pointer;
     font-size: 18px;
+    transition: background-color 200ms ease-in-out;
+}
+
+.my-button--sm {
+    min-width: 150px;
+    height: 30px;
+    font-size: 14px;
+}
+
+.my-button--md {
+    min-width: 150px;
+    height: 40px;
+    font-size: 18px;
+}
+
+.my-button--lg {
+    min-width: 150px;
+    height: 50px;
+    font-size: 22px;
+}
+
+.my-button--primary:hover {
+    background: rgb(11, 52, 174);
+}
+
+.my-button--bordered:hover {
+    background: royalblue;
+    color: aliceblue;
 }
 
 .my-button--primary {
-    background-color: #674a02;
+    background-color: royalblue;
     color: white;
+    border: none;
 }
 
 .my-button--bordered {
-    background-color: #674a02;
-    color: white;
+    background: none;
+    color: royalblue;
+    border: 1px solid royalblue;
 }
