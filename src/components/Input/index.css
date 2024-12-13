@@ -3,27 +3,32 @@
   }
   
   .input {
-    font-family: 'Inter', sans-serif;
+    width: 200;
+    padding: 8px 12px;
+    font-size: 14px;
     border-radius: 4px;
-    padding: 8px 10px;
-    border: 1px solid #ccc;
-    width: 300px;
-    transition: border-color 200ms ease-in-out, box-shadow 200ms ease-in-out;
+    color: black;
+    transition: color 200ms ease-in-out;
+    font-weight: 150;
+
   }
   
-  .input:focus {
-    border-color: royalblue;
-    box-shadow: 0 0 4px rgba(65, 105, 225, 0.5);
+  .input::placeholder {
+    color: black; 
   }
   
   .input--danger {
     border-color: red;
+  }
+  
+  .input--danger::placeholder {
     color: red;
   }
   
   .input-label {
-    font-size: 14px;
+    display: block;
     margin-bottom: 8px;
+    color: black;
   }
   
   .label--danger {

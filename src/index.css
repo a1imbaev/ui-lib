@@ -27,6 +27,19 @@ body {
   height: 200px;
 }
 
+.input {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.typography {
+  width: Fixed (634px)px;
+  height: Hug (220px)px;
+  gap: 20px;
+  opacity: 0px;
+}
+
 h1 {
   font-size: 32px;
   color: royalblue;

@@ -22,9 +22,11 @@ function App() {
       </div>
 
       <div className="section">
-        <Input label="Name" type="name" placeholder="Ivan Ivanov" />
-        <Input label="Name" type="name" placeholder="Focus" />
-        <Input label="Name" type="name" placeholder="Danger" danger />
+        <div className='input'>
+          <Input label="Name" type="name" placeholder="Ivan Ivanov" />
+          <Input label="Name" type="name" placeholder="Focus" />
+          <Input label="Name" type="name" placeholder="Danger" danger />
+        </div>
       </div>
 
       <div className="section">
@@ -32,14 +34,22 @@ function App() {
           <Button variant="bordered" size="sm">Tooltip Top</Button>
         </Tooltip>
         <Tooltip text="I am a tooltip" position="left">
-          <Button variant="primary" size="sm">Tooltip Left</Button>
+          <Button variant="bordered" size="sm">Tooltip Left</Button>
         </Tooltip>
         <Tooltip text="I am a tooltip" position="right">
-          <Button variant="primary" size="sm">Tooltip Right</Button>
+          <Button variant="bordered" size="sm">Tooltip Right</Button>
         </Tooltip>
         <Tooltip text="I am a tooltip" position="bottom">
-          <Button variant="primary" size="sm">Tooltip Bottom</Button>
+          <Button variant="bordered" size="sm">Tooltip Bottom</Button>
         </Tooltip>
+      </div>
+
+      <div className='section'>
+        <div className='typography'>
+          <p size = "sm">SM. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+          <p size = "md">MD. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+          <p size = "lg">LG. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+        </div>
       </div>
 
       <div className="section">
