@@ -1,0 +1,29 @@
+.tooltip-wrapper {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .tooltip {
+    font-family: 'Inter', sans-serif;
+    position: absolute;
+    background-color: black;
+    color: white;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 12px;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 200ms ease-in-out;
+  }
+  
+  .tooltip-wrapper:hover .tooltip {
+    visibility: visible;
+    opacity: 1;
+  }
+  
+  .tooltip--top {
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  

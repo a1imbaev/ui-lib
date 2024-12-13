@@ -1,45 +1,50 @@
 .my-button {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
     border-radius: 8px;
     cursor: pointer;
-    font-size: 18px;
     transition: background-color 200ms ease-in-out;
-}
-
-.my-button--sm {
-    min-width: 150px;
-    height: 30px;
-    font-size: 14px;
-}
-
-.my-button--md {
-    min-width: 150px;
+  }
+  
+  .my-button--sm {
+    min-width: 100px;
+    height: 32px;
+    font-size: 12px;
+  }
+  
+  .my-button--md {
+    min-width: 120px;
     height: 40px;
-    font-size: 18px;
-}
-
-.my-button--lg {
+    font-size: 14px;
+  }
+  
+  .my-button--lg {
     min-width: 150px;
-    height: 50px;
-    font-size: 22px;
-}
-
-.my-button--primary:hover {
-    background: rgb(11, 52, 174);
-}
-
-.my-button--bordered:hover {
-    background: royalblue;
-    color: aliceblue;
-}
-
-.my-button--primary {
+    height: 48px;
+    font-size: 16px;
+  }
+  
+  .my-button--primary {
     background-color: royalblue;
     color: white;
     border: none;
-}
-
-.my-button--bordered {
-    background: none;
+  }
+  
+  .my-button--primary:hover {
+    background-color: #024694;
+  }
+  
+  .my-button--bordered {
+    background-color: white;
     color: royalblue;
     border: 1px solid royalblue;
-}
+  }
+  
+  .my-button--bordered:hover {
+    background-color: royalblue;
+    color: white;
+  }
+  
