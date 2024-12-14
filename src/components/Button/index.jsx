@@ -1,10 +1,17 @@
-import "./index.css"
+import React from 'react';
+import './index.css';
 
-export function Button(props) {
-    const { size = "md", variant = "primary", type = "button", Onclick, disabled = false, children } = props
-    const className = `my-button my-button--${variant} my-button--${size}`;
-
+const Button = ({ type = 'button', onClick, disabled, size = 'md', variant = 'primary', children }) => {
     return (
-        <button className={className} type={type} onClick={Onclick} disabled={disabled}> {children} </button>
+        <button
+            className={`button ${variant} ${size}`}
+            type={type}
+            onClick={onClick}
+            disabled={disabled}
+        >
+            {children}
+        </button>
     );
-}
+};
+
+export default Button;

@@ -1,67 +1,59 @@
 import React from 'react';
-import { Button } from './components/Button';
-import { Input } from './components/Input';
-import { Typography } from './components/Typography';
-import { Heading } from './components/Heading';
-import { Tooltip } from './components/Tooltip';
-import { Accordion } from './components/Accordion';
-import './index.css';
+import Button from './components/Button/index';
+import Input from './components/Input/index';
+import Typography from './components/Typography/index';
+import Heading from './components/Heading/index';
+import Tooltip from './components/Tooltip/index';
+import Accordion from './components/Accordion/index';
 
-function App() {
-  return (
-    <div className="app-container">
-      <div className="section">
-        <div className="button-group">
-          <Button variant="primary" size="lg">lg, primary</Button>
-          <Button variant="primary" size="md">md, primary</Button>
-          <Button variant="primary" size="sm">sm, primary</Button>
-          <Button variant="bordered" size="lg">lg, bordered</Button>
-          <Button variant="bordered" size="md">md, bordered</Button>
-          <Button variant="bordered" size="sm">sm, bordered</Button>
+const App = () => {
+    return (
+        <div style={{ padding: '20px', fontFamily: 'Inter, sans-serif' }}>
+            <Heading level={1}>UI Library Showcase</Heading>
+
+            <Heading level={2}>Buttons</Heading>
+            <div>
+                <Button variant="primary" size="lg">lg, primary</Button>
+                <Button variant="primary" size="md">md, primary</Button>
+                <Button variant="primary" size="sm">sm, primary</Button>
+                <Button variant="bordered" size="lg">lg, bordered</Button>
+                <Button variant="bordered" size="md">md, bordered</Button>
+                <Button variant="bordered" size="sm">sm, bordered</Button>
+            </div>
+
+            <Heading level={2}>Inputs</Heading>
+            <Input label="Name" placeholder="Ivan Ivanov" value="" />
+            <Input label="Name" placeholder="Focus" danger={false} />
+            <Input label="Name" placeholder="Danger" danger={true} />
+
+            <Heading level={2}>Typography</Heading>
+            <Typography textSize="sm">SM. Lorem ipsum dolor sit amet...</Typography>
+            <Typography textSize="md">MD. Lorem ipsum dolor sit amet...</Typography>
+            <Typography textSize="lg">LG. Lorem ipsum dolor sit amet...</Typography>
+
+            <Heading level={2}>Tooltips</Heading>
+            <Tooltip text="Tooltip Top" position="top">
+                <Button variant="primary">Tooltip Top</Button>
+            </Tooltip>
+            <Tooltip text="Tooltip Left" position="left">
+                <Button variant="primary">Tooltip Left</Button>
+            </Tooltip>
+            <Tooltip text="Tooltip Right" position="right">
+                <Button variant="primary">Tooltip Right</Button>
+            </Tooltip>
+            <Tooltip text="Tooltip Bottom" position="bottom">
+                <Button variant="primary">Tooltip Bottom</Button>
+            </Tooltip>
+
+            <Heading level={2}>Accordion</Heading>
+            <Accordion title="Accordion">
+                Lorem ipsum dolor sit amet...
+            </Accordion>
+            <Accordion title="Accordion Expanded" defaultOpen>
+                Lorem ipsum dolor sit amet...
+            </Accordion>
         </div>
-      </div>
-
-      <div className="section">
-        <div className='input'>
-          <Input label="Name" type="name" placeholder="Ivan Ivanov" />
-          <Input label="Name" type="name" placeholder="Focus" />
-          <Input label="Name" type="name" placeholder="Danger" danger />
-        </div>
-      </div>
-
-      <div className="section">
-        <Tooltip text="I am a tooltip" position="top">
-          <Button variant="bordered" size="sm">Tooltip Top</Button>
-        </Tooltip>
-        <Tooltip text="I am a tooltip" position="left">
-          <Button variant="bordered" size="sm">Tooltip Left</Button>
-        </Tooltip>
-        <Tooltip text="I am a tooltip" position="right">
-          <Button variant="bordered" size="sm">Tooltip Right</Button>
-        </Tooltip>
-        <Tooltip text="I am a tooltip" position="bottom">
-          <Button variant="bordered" size="sm">Tooltip Bottom</Button>
-        </Tooltip>
-      </div>
-
-      <div className='section'>
-        <div className='typography'>
-          <p size = "sm">SM. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-          <p size = "md">MD. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-          <p size = "lg">LG. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-        </div>
-      </div>
-
-      <div className="section">
-        <Accordion title="Accordion" defaultOpen>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-        </Accordion>
-        <Accordion title="Accodrion Expanded">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-        </Accordion>
-      </div>
-    </div>
-  );
-}
+    );
+};
 
 export default App;

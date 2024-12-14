@@ -1,32 +1,20 @@
 import React from 'react';
 import './index.css';
 
-export function Input({ 
-  type = 'text', 
-  placeholder, 
-  value, 
-  onChange, 
-  disabled, 
-  label, 
-  danger 
-}) {
-  const inputClass = `input ${danger ? 'input--danger' : 'input--default'}`;
+const Input = ({ type = 'text', placeholder, value, onChange, disabled, label, danger }) => {
+    return (
+        <div className="input-container">
+            {label && <label className={danger ? 'label danger' : 'label'}>{label}</label>}
+            <input
+                className={`input ${danger ? 'danger' : ''}`}
+                type={type}
+                placeholder={placeholder}
+                value={value}
+                onChange={onChange}
+                disabled={disabled}
+            />
+        </div>
+    );
+};
 
-  return (
-    <div className="input-wrapper">
-      {label && (
-        <label className={`input-label ${danger ? 'label--danger' : ''}`}>
-          {label}
-        </label>
-      )}
-      <input
-        className={inputClass}
-        type={type}
-        placeholder={placeholder}
-        value={value}
-        onChange={onChange}
-        disabled={disabled}
-      />
-    </div>
-  );
-}
+export default Input;

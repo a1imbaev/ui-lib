@@ -1,11 +1,19 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './index.css';
 
-export function Tooltip({ text, position, children }) {
-  return (
-    <div className="tooltip-wrapper">
-      {children}
-      <span className={`tooltip tooltip--${position}`}>{text}</span>
-    </div>
-  );
-}
+const Tooltip = ({ text, position = 'top', children }) => {
+    const [visible, setVisible] = useState(false);
+
+    return (
+        <div
+            className="tooltip-container"
+            onMouseEnter={() => setVisible(true)}
+            onMouseLeave={() => setVisible(false)}
+        >
+            {visible && <div className={`tooltip-box ${position}`}>{text}</div>}
+            {children}
+        </div>
+    );
+};
+
+export default Tooltip;

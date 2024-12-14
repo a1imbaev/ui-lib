@@ -1,15 +1,23 @@
 import React, { useState } from 'react';
 import './index.css';
 
-export function Accordion({ title, defaultOpen, children }) {
-  const [isOpen, setIsOpen] = useState(defaultOpen);
+const Accordion = ({ title, defaultOpen = false, children }) => {
+    const [isOpen, setIsOpen] = useState(defaultOpen);
 
-  return (
-    <div className={`accordion ${isOpen ? 'accordion--open' : ''}`}>
-      <div className="accordion-header" onClick={() => setIsOpen(!isOpen)}>
-        {title}
-      </div>
-      {isOpen && <div className="accordion-content">{children}</div>}
-    </div>
-  );
-}
+    return (
+        <div className="accordion">
+            <div
+                className="accordion-header"
+                onClick={() => setIsOpen(!isOpen)}
+            >
+                {title}
+                <span className="accordion-toggle">
+                    {isOpen ? '-' : '+'}
+                </span>
+            </div>
+            {isOpen && <div className="accordion-content">{children}</div>}
+        </div>
+    );
+};
+
+export default Accordion;

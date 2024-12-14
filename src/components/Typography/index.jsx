@@ -1,7 +1,8 @@
 import React from 'react';
-import './Typography.css';
+import './index.css';
 
-export function Typography({ textSize = 'md', className = '', children }) {
-  const textClass = `typography typography--${textSize} ${className}`;
-  return <p className={textClass}>{children}</p>;
-}
+const Typography = ({ textSize = 'md', className, children }) => {
+    return <p className={`typography ${textSize} ${className}`}>{children}</p>;
+};
+
+export default Typography;

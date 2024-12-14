@@ -1,29 +1,17 @@
 .typography {
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-      'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
-    margin-bottom: 16px;
-    width: 634px; 
-    text-align: left;
-  }
-  
-  .typography--sm {
-    height: 48px;
-    font-size: 12px;
-    font-weight: 200;
-    text-decoration-skip-ink: auto;
-  }
-  
-  .typography--md {
-    height: 60px;
+    margin: 10px 0;
+    line-height: 1.6;
+    font-family: 'Inter', sans-serif;
+}
+
+.typography.sm {
     font-size: 14px;
-    font-weight: 300;
-    text-decoration-skip-ink: auto;
-  }
-  
-  .typography--lg {
-    height: 72px;
+}
+
+.typography.md {
     font-size: 16px;
-    font-weight: 400;
-    text-decoration-skip-ink: auto;
-  }
-  
+}
+
+.typography.lg {
+    font-size: 18px;
+}
