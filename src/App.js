@@ -1,8 +1,8 @@
 import React from 'react';
 import { Button } from './components/Button';
 import { Input } from './components/Input';
-// import { Typography } from './components/Typography';
-// import { Heading } from './components/Heading';
+import { Typography } from './components/Typography';
+import { Heading } from './components/Heading';
 import { Tooltip } from './components/Tooltip';
 import { Accordion } from './components/Accordion';
 import './index.css';
@@ -14,7 +14,7 @@ function App() {
         <div className="button-group">
           <Button variant="primary" size="lg">lg, primary</Button>
           <Button variant="primary" size="md">md, primary</Button>
-          <Button variant="primary" size="sm" disabled>sm, primary</Button>
+          <Button variant="primary" size="sm">sm, primary</Button>
           <Button variant="bordered" size="lg">lg, bordered</Button>
           <Button variant="bordered" size="md">md, bordered</Button>
           <Button variant="bordered" size="sm">sm, bordered</Button>
